@@ -90,7 +90,7 @@ body {
     3.1 Header
 --------------------------------------------------------------*/
 
-header {
+header, nav {
 	background-color: darkgreen;
 	text-align: center;
 	}
@@ -100,7 +100,6 @@ header {
 --------------------------------------------------------------*/
 #toggle-menu {
     display: block;
-    background-color: #green;
     text-align: center;
     color: white;
     padding: 5px;
@@ -109,7 +108,7 @@ nav ul {
     display: none;
     justify-content: center;
     flex-direction: column;
-    background-color: #green;
+    background-color: darkgreen;
 	}
 nav ul li {
     font-size: 16px;
@@ -148,7 +147,7 @@ body {
     background-color: #ddd;
     }
 #content {
-    padding-bottom: 100px; /* Keeps the footer from covering content at bottom of page, especially in mobile view */
+    padding: 0 20px 100px; /* Keeps the footer from covering content at bottom of page, especially in mobile view */
 }
 #article {
     padding: 10px;
@@ -397,11 +396,36 @@ p {
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) {
     header {
-        transform: rotate(270deg);
+        transform: rotate(-90deg) translateX(-100%);
+        transform-origin: 0% 0%;
+        width: 100vh;
         position: fixed;
-        left: 0;
-        width: 120vh;
+        top: 0;
     }
+    #navspacer{
+        display: block;
+        height: 15vh;
+    }
+    nav {
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 150px;
+        height: 100%;
+        background-color: darkgreen;
+    }
+    #menu #main-menu{
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+    }
+    #main-menu li {
+        line-height: 2;
+    }
+    #content {
+        margin: 0 200px 100px;
+    }         
     #article {
         width: 60%;
         margin: auto;
