@@ -1,8 +1,8 @@
 /*
-Theme Name: Segwyne's Needle
+Theme Name: Eltara character database
 Author: Saunders Technology
 Author URI: https://saunderstechnology.com/
-Description: This is a custom theme for a sewing website.  It was created from raw HTML and CSS without a framework.
+Description: This is the front end for a character management database.
 Version: 1.0
 
 ----------------------------------------------------------------
@@ -42,8 +42,8 @@ Version: 1.0
     1.0 Colors
 --------------------------------------------------------------*/
 /*
-d76bc1 is pink background
-9649af is purple accent color
+darkgreen is accent color
+#ddd is base color
 */
 
 /*--------------------------------------------------------------
@@ -56,12 +56,17 @@ d76bc1 is pink background
 --------------------------------------------------------------*/
 body {
     margin:0;
-}
+    background-color: rgba(0,100,0,.25);
+    }
+
 /*--------------------------------------------------------------
     2.1 Alignments
 --------------------------------------------------------------*/
 * {
     box-sizing: borderbox;
+}
+.spacer {
+  height: 150px;
 }
 /*--------------------------------------------------------------
     2.2 Clearings
@@ -72,11 +77,6 @@ body {
     clear: both;
     display: table;
 	}
-
-/*--------------------------------------------------------------
-    2.3 Global Elements
---------------------------------------------------------------*/
-
 
 /*--------------------------------------------------------------
    __                       __ 
@@ -93,42 +93,63 @@ body {
 header, nav {
 	background-color: darkgreen;
 	text-align: center;
+  height: 200px;
+}
+header {  
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: 0% 0%;
+  width: 100vh;
+  position: fixed;
+  top: 0;
 	}
 
 /*--------------------------------------------------------------
     3.2 Navigation
 --------------------------------------------------------------*/
-#toggle-menu {
+
+nav {
     display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: darkgreen;
+}
+#navspacer {
+    height: 15%;
+    }
+#toggle-menu {
+    display: none;
     text-align: center;
     color: white;
     padding: 5px;
 }
-nav ul {
-    display: none;
+#main-menu {
     justify-content: center;
     flex-direction: column;
     background-color: darkgreen;
-	}
-nav ul li {
+    display: flex;
+    position: fixed;
+    right: 0;
+}
+#main-menu li {
     font-size: 16px;
+    line-height: 2;
+    width: 140px;
     padding: 5px 30px;  
     text-align: center;
     color: white;
     }
-nav ul li a {
+#main-menu li a {
     color: white;
     }
-/* Hides the menu by default */
-#main-menu {
-    display: none;
-}
 /* Turns the menu on */
 #tm:checked + #main-menu {
     display: flex;
 }
 
-#menu input[type="checkbox"], #menu ul span.drop-icon {
+#menu input[type="checkbox"] {
     display: none;
 }
 
@@ -140,19 +161,22 @@ nav ul li a {
     3.4 Content
 --------------------------------------------------------------*/
     
+.container {
+  display: flex;
+  flex-direction: grid;
+  justify-content: center;
+}
 /*--------------------------------------------------------------
     3.5 Pages
 --------------------------------------------------------------*/
-body {
-    background-color: #ddd;
-    }
 #content {
-    padding: 0 20px 100px; /* Keeps the footer from covering content at bottom of page, especially in mobile view */
+    padding: 0 225px 100px 225px; /* Keeps the footer from covering content at bottom of page, especially in mobile view */
 }
 #article {
-    padding: 10px;
-    text-align: center;
-    }
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  }
 
 /*--------------------------------------------------------------
     3.6 Sidebars
@@ -165,15 +189,15 @@ footer {
 	position: fixed; /* Keeps footer at bottom of the page, regardless of height of content */
     bottom: 0;
     width: calc(100% - 20px);
-    background-color: #green;
-	text-align: center;
+    background-color: #darkgreen;
+	  text-align: center;
     color: white;
     padding: 10px;
     display: flex;
     flex-direction: column;
 	}
 footer > div {
-    width: 100%;
+    width: 50%;
     padding: 5px 0;
 }
 footer a {
@@ -192,15 +216,16 @@ footer a {
     4.1 Tables
 --------------------------------------------------------------*/
 table {
-    margin: 10px;
-    border-collapse: collapse;
-    }
+  margin: auto;
+  width: 75%;
+  border-collapse: collapse;
+  }
 
-td:first-child {
+td:first-child {        /* Sets the width of the first column */
     width: 70%;
     }
 
-td:last-child {
+td:last-child {         /* Sets the width of the last column */
     width: 30%;
     text-align: center;
     }
@@ -212,7 +237,9 @@ td {
 /*--------------------------------------------------------------
     4.2 Links
 --------------------------------------------------------------*/
-
+a {
+  color: darkgreen;
+}
 /*--------------------------------------------------------------
     4.3 Forms
 --------------------------------------------------------------*/
@@ -235,6 +262,34 @@ td {
 /*--------------------------------------------------------------
     4.5 Buttons
 --------------------------------------------------------------*/
+button, .button {
+  background-color: #ddd;
+  padding: 30px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 25px;
+  border: 0;
+  box-shadow: 10px 10px black;
+  color: darkgreen;
+  font-family: 'Metamorphous', serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+button a, .button a{
+  text-decoration: none;
+}
+
+button:hover, .button:hover {
+  background-color: darkgreen;
+  color: white;
+  box-shadow: 10px 10px black;
+}
+
+button:hover a, .button:hover a{
+  color: white;
+  text-decoration: none;
+}
 
 /*--------------------------------------------------------------
  ______                                  __       
@@ -247,7 +302,7 @@ td {
 --------------------------------------------------------------*/
 h1 {
     font-family: 'Fredericka the Great', cursive;
-    font-size: 30px;
+    font-size: 100px;
     font-weight: 500;
     text-align: center;
 	}
@@ -261,14 +316,14 @@ p {
 #banner {
     margin: 0;
     color: white;
-    font-size: 30px;
+    font-size: 100px;
     }
 #byline {
-    display: none;
+    display: inline;
     margin: 0;
     color: white;
-    font-family: 'Uncial Antiqua', cursive;
-    font-size: 30px;
+    font-family: 'Metamorphous', serif;
+    font-size: 45px;
     }
 
 /*--------------------------------------------------------------
@@ -279,69 +334,7 @@ p {
 
     6.0 Media
 --------------------------------------------------------------*/
-.container {
-    width: 100%;
-}
 
-.landscape {
-    max-width: 640px;                   /* Sets orientation for horizontal photo */
-    height: auto;                       /* Ditto */
-    position: relative;
-    margin: 10px auto;
-}
-
-.portrait {
-    max-width: 400px;                   /* Sets orientation for vertical photo */
-    height: auto;                       /* Ditto */
-    position: relative;
-    margin: 10px auto;
-}
-
-.my-slides, .my-slides-1,
-.my-slides-2, .my-slides-3 {           /* Targeting the actual photos themselves */
-    display: none;                     /* Sets the images to wait to be shown */
-}
-
-.prev, .next {                          /* Buttons to change the picture in each slideshow */
-    position: absolute;                 /* Anchors them in place */
-    cursor: pointer;                    /* Prevents the cursor from becoming the standard link cursor */
-    top: 50%;                           /* Sets the buttons half-way down the edge of the photo */
-    color: white;                       /* Self-explanatory */
-    font-size: 2em;                     /* Sets size of icon */
-    font-weight: bold;                  /* Sets thickness of icon */
-    border-radius: 0 5px 5px 0;         /* Rounds the outside corners */
-    margin-top: -20px;                  /* Pulls the button up just a bit to counteract height of itself */
-    padding: 15px;                      /* Gives some space between icon and edge of button */
-}
-
-.next {
-    right: 0;                           /* Moves Next button to right side of photo */
-    border-radius: 5px 0 0 5px;         /* Mirrors the rounded corners of the Next button */
-}
-
-.prev:hover, .next:hover {              /* When hovering ... */
-    background-color: rgba(0,0,0,0.75); /* Show a semi-transparent background for the button */
-}
-
-.caption {                              /* Styling the caption text */
-    font-size: 1.2em;                   /* A little bigger than average */
-    color: white;                       /* White letters ... */
-    background-color: rgba(0,0,0,0.6);  /* on a semi-transparent black stripe ... */
-    bottom: 5px;                        /* just a few pixels up from the bottom of the photo */
-    padding: 8px 0;                     /* Give some space above and below the caption */
-    text-align: center;                 /* Self-explanatory */
-    width: 100%;                        /* Else the centering is useless and the stripe doesn't happen */
-    position: absolute;                 /* Make sure it sits on the photo and not below it */
-}
-
-.numbertext {                           /* Styling the counter */
-    font-size: 1.2em;                   /* So they are easily seen */
-    color: white;                       /* white letters ... */
-    background-color: rgba(0,0,0,0.6);  /* on a semi-transparent black background */
-    padding: 8px;                       /* Give some space around the counter */
-    position: absolute;                 /* So it sits on the photo and not above it */
-    top: 0;                             /* Make sure they sit at the top */
-}
 /*--------------------------------------------------------------
    ___                             _         
   / _ \___ ___ ___  ___  ___  ___ (_)  _____ 
@@ -350,97 +343,30 @@ p {
             /_/                              
     7.0 Responsive
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-   7.1 Tablets > 768px
---------------------------------------------------------------*/
-@media only screen and (min-width: 768px) {
-    #menu #main-menu {
-        display: flex;
+media only screen and (max-width: 768px) {
+    header {
+      transform: rotate (0deg);
+    }
+    #main-menu {
+        display: none;
         flex-direction: row;
     }
 
-    #toggle-menu, 
-    #menu label.drop-icon {
-        display: none;
+    #toggle-menu {
+        display: block;
     }
     #byline {
-        display: inline;
+        display: none;
     }
     footer {
-        flex-direction: row;
+        flex-direction: column;
     }
     footer > div {
-        width: 50%;
+        width: 100%;
     }
-}
-
-/*--------------------------------------------------------------
-    7.2 Small desktop > 992px
---------------------------------------------------------------*/
-@media only screen and (min-width: 992px) {
     #banner {
-        font-size: 100px;
-    }
-    #article {
-        width: 80%;
-        margin: auto;
-    }
-    table {
-        width: 75%;
-        margin: auto;
+        font-size: 30px;
     }
 }
 
-/*--------------------------------------------------------------
-    7.3 Large desktop > 1200px
---------------------------------------------------------------*/
-@media only screen and (min-width: 1200px) {
-    header {
-        transform: rotate(-90deg) translateX(-100%);
-        transform-origin: 0% 0%;
-        width: 100vh;
-        position: fixed;
-        top: 0;
-    }
-    #navspacer{
-        display: block;
-        height: 15vh;
-    }
-    nav {
-        display: block;
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 150px;
-        height: 100%;
-        background-color: darkgreen;
-    }
-    #menu #main-menu{
-        flex-direction: column;
-        position: fixed;
-        right: 0;
-    }
-    #main-menu li {
-        line-height: 2;
-    }
-    #content {
-        margin: 0 200px 100px;
-    }         
-    #article {
-        width: 60%;
-        margin: auto;
-    } 
-    table {
-        width: 50%;
-        margin: auto;
-    }
-    .container {
-        width: 50%;
-        float: left;
-    }
-    .landscape {
-        margin: 130px auto;
-    }
-}
-
-
+/

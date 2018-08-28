@@ -1,0 +1,371 @@
+/*
+Theme Name: Segwyne's Needle
+Author: Saunders Technology
+Author URI: https://saunderstechnology.com/
+Description: This is a custom theme for a sewing website.  It was created from raw HTML and CSS without a framework.
+Version: 1.0
+
+----------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Color reference numbers
+2.0 Base
+    2.1 Alignments
+    2.2 Clearings
+3.0 Layout
+    3.1 Header
+    3.2 Navigation
+    3.3 Splash Page
+    3.4 Content
+    3.5 Pages
+    3.6 Sidebars
+    3.7 Footer
+4.0 Modules
+    4.1 Tables
+    4.2 Links
+    4.3 Forms
+    4.4 Lists
+    4.5 Buttons
+5.0 Typography
+6.0 Media
+7.0 Responsive - default = phone < 768px
+    7.1 Tablets > 768px
+    7.2 Small desktop > 992px
+    7.3 Large desktop > 1200px
+*/
+/*--------------------------------------------------------------
+  _____     __           
+ / ___/__  / /__  _______
+/ /__/ _ \/ / _ \/ __(_-<
+\___/\___/_/\___/_/ /___/
+
+    1.0 Colors
+--------------------------------------------------------------*/
+/*
+darkgreen is accent color
+#ddd is base color
+*/
+
+/*--------------------------------------------------------------
+   ___              
+  / _ )___ ____ ___ 
+ / _  / _ `(_-</ -_)
+/____/\_,_/___/\__/ 
+                    
+    2.0 Base
+--------------------------------------------------------------*/
+body {
+    margin:0;
+    background-color: #ddd;
+    }
+
+/*--------------------------------------------------------------
+    2.1 Alignments
+--------------------------------------------------------------*/
+* {
+    box-sizing: borderbox;
+}
+/*--------------------------------------------------------------
+    2.2 Clearings
+--------------------------------------------------------------*/
+/* Keep images within their elements */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+	}
+
+/*--------------------------------------------------------------
+   __                       __ 
+  / /  ___ ___ _____  __ __/ /_
+ / /__/ _ `/ // / _ \/ // / __/
+/____/\_,_/\_, /\___/\_,_/\__/ 
+          /___/                
+    3.0 Layout
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+    3.1 Header
+--------------------------------------------------------------*/
+
+header, nav {
+	background-color: darkgreen;
+	text-align: center;
+	}
+
+/*--------------------------------------------------------------
+    3.2 Navigation
+--------------------------------------------------------------*/
+#toggle-menu {
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+nav ul {
+    display: none;          /* Hides the menu until triggered */
+    justify-content: center;
+    flex-direction: column;
+    background-color: darkgreen;
+	}
+nav ul li {
+    font-size: 16px;
+    padding: 5px 30px;  
+    text-align: center;
+    color: white;
+    }
+nav ul li a {
+    color: white;
+    }
+/* Hides the menu by default */
+#main-menu {
+    display: none;
+}
+/* Turns the menu on */
+#tm:checked + #main-menu {
+    display: flex;
+}
+
+#menu input[type="checkbox"] {
+    display: none;
+}
+
+/*--------------------------------------------------------------
+    3.3 Splash Page
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+    3.4 Content
+--------------------------------------------------------------*/
+    
+/*--------------------------------------------------------------
+    3.5 Pages
+--------------------------------------------------------------*/
+#content {
+    padding: 0 20px 100px; /* Keeps the footer from covering content at bottom of page, especially in mobile view */
+}
+#article {
+    padding: 10px;
+    text-align: center;
+    }
+
+/*--------------------------------------------------------------
+    3.6 Sidebars
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+    3.7 Footer
+--------------------------------------------------------------*/
+footer {
+	position: fixed; /* Keeps footer at bottom of the page, regardless of height of content */
+    bottom: 0;
+    width: calc(100% - 20px);
+    background-color: #darkgreen;
+	text-align: center;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+	}
+footer > div {
+    width: 100%;
+    padding: 5px 0;
+}
+footer a {
+    color: white;
+    }
+/*--------------------------------------------------------------
+   __  ___        __     __   
+  /  |/  /__  ___/ /_ __/ /__ 
+ / /|_/ / _ \/ _  / // / / -_)
+/_/  /_/\___/\_,_/\_,_/_/\__/ 
+                                                            
+    4.0 Module
+--------------------------------------------------------------*/
+    
+/*--------------------------------------------------------------
+    4.1 Tables
+--------------------------------------------------------------*/
+table {
+    margin: 10px;
+    border-collapse: collapse;
+    }
+
+td:first-child {        /* Sets the width of the first column */
+    width: 70%;
+    }
+
+td:last-child {         /* Sets the width of the last column */
+    width: 30%;
+    text-align: center;
+    }
+
+td {
+    padding: 5px;
+    border: 1px solid purple;
+    }
+/*--------------------------------------------------------------
+    4.2 Links
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+    4.3 Forms
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+    4.4 Lists
+--------------------------------------------------------------*/
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+ 	}
+
+.menu li a{
+    text-decoration: none;
+    }
+
+/*--------------------------------------------------------------
+    4.5 Buttons
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+ ______                                  __       
+/_  __/_ _____  ___  ___ ________ ____  / /  __ __
+ / / / // / _ \/ _ \/ _ `/ __/ _ `/ _ \/ _ \/ // /
+/_/  \_, / .__/\___/\_, /_/  \_,_/ .__/_//_/\_, / 
+    /___/_/        /___/        /_/        /___/  
+
+    5.0 Typography
+--------------------------------------------------------------*/
+h1 {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+	}
+h2 {
+    text-align: center;
+    }
+p {
+    margin: 10px;
+    text-align: center;
+    }
+#banner {
+    margin: 0;
+    color: white;
+    font-size: 30px;
+    }
+#byline {
+    display: none;
+    margin: 0;
+    color: white;
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 30px;
+    }
+
+/*--------------------------------------------------------------
+   __  ___       ___     
+  /  |/  /__ ___/ (_)__ _
+ / /|_/ / -_) _  / / _ `/
+/_/  /_/\__/\_,_/_/\_,_/                         
+
+    6.0 Media
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+   ___                             _         
+  / _ \___ ___ ___  ___  ___  ___ (_)  _____ 
+ / , _/ -_|_-</ _ \/ _ \/ _ \(_-</ / |/ / -_)
+/_/|_|\__/___/ .__/\___/_//_/___/_/|___/\__/ 
+            /_/                              
+    7.0 Responsive
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+   7.1 Tablets > 768px
+--------------------------------------------------------------*/
+@media only screen and (min-width: 768px) {
+    #menu #main-menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #toggle-menu {
+        display: none;
+    }
+    #byline {
+        display: inline;
+    }
+    footer {
+        flex-direction: row;
+    }
+    footer > div {
+        width: 50%;
+    }
+}
+
+/*--------------------------------------------------------------
+    7.2 Small desktop > 992px
+--------------------------------------------------------------*/
+@media only screen and (min-width: 992px) {
+    #banner {
+        font-size: 100px;
+    }
+    #article {
+        width: 80%;
+        margin: auto;
+    }
+    table {
+        width: 75%;
+        margin: auto;
+    }
+}
+
+/*--------------------------------------------------------------
+    7.3 Large desktop > 1200px
+--------------------------------------------------------------*/
+@media only screen and (min-width: 1200px) {
+    header {
+        transform: rotate(-90deg) translateX(-100%);
+        transform-origin: 0% 0%;
+        width: 100vh;
+        position: fixed;
+        top: 0;
+    }
+    #navspacer{
+        display: block;
+        height: 15vh;
+    }
+    nav {
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 150px;
+        height: 100%;
+        background-color: darkgreen;
+    }
+    #menu #main-menu{
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+    }
+    #main-menu li {
+        line-height: 2;
+    }
+    #content {
+        margin: 0 200px 100px;
+    }         
+    #article {
+        width: 60%;
+        margin: auto;
+    } 
+    table {
+        width: 50%;
+        margin: auto;
+    }
+
+}
+
+
