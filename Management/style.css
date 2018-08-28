@@ -276,7 +276,7 @@ button, .button {
   font-weight: bold;
 }
 
-button a, .button a{
+button a, .container a {
   text-decoration: none;
 }
 
