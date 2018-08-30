@@ -8,4 +8,13 @@
 
 <p>The humans preferred to think of themselves as Eltara’s third native race, equal to the Seers and Speakers.  And as other races came to Eltara, they learned that they could imitate them also.  And so was born the race known as human, with their talent for adaptability.</p>
 </div> <!-- end .article -->
+
+<div class="prev-story">
+  <a href="sacrifice.php">Previous story</a>
+</div>
+<div class="next-story">
+  <a href="trolls.php">Next Story</a>
+</div>
+
+
 <?php include('footer.php') ?>

@@ -16,6 +16,11 @@
 
 <p>And so the heroes sacrificed their lives, and the Trolls devoted theirs to the continuing safety of Eltara and all her people.”</p>
 
-
 </div> <!-- end .article -->
+
+<div class="prev-story">
+  <a href="trolls.php">Previous story</a>
+</div>
+
+
 <?php include('footer.php') ?>

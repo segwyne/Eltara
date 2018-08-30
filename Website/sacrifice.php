@@ -9,5 +9,13 @@
 <p>After 20 years, he finally determined he had enough knowledge to bottle them forever. He collected all his tools and, with the assistance of his wife Lioryn, began his ritual on a night of great power. It was a long and arduous night, and as he neared the end he was fatigued. As he struggled through the complex words of power, his tongue fumbled and he misspoke a key word. The gods seized the moment, and stole his wife. The result was that the gods were not bottled, but trapped his wife’s spirit in the earth itself. The planet was hurtled across the universe away from the gods, and so his work was in a way successful. He was so engrossed in his work that he did not notice anything amiss until he was done and it was too late.</p>
 
 <p>Lioryn was trapped within the planet and gave it life and sentience. She learned how to control the magic of the planet to a slight degree.</p>
+
 </div> <!-- end .article -->
+
+<div class="next-story">
+<a href="humans.php">Next Story</a>
+</div>
+
+
+
 <?php include('footer.php') ?>

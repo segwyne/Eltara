@@ -21,10 +21,10 @@
     <input type="checkbox" id="tm" style="border: 1px solid red">
     <ul class="menu" id="main-menu">
       <li><a href="index.php">Home</a></li>
-      <li><a href="">Rulebook</a></li>
+      <li><a href="rulebook.php">Rulebook</a></li>
       <li><a href="lore.php">Lore</a></li>
-      <li><a href="">Events</a></li>
-      <li><a href="">Members</a></li>
+      <li><a href="events.php">Events</a></li>
+      <li><a href="members.php">Members</a></li>
       <li><a href="contact.php">Contact</a></li>
     </ul>
   </nav>  <!-- end of menu -->

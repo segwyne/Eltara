@@ -23,4 +23,13 @@
 <p>And so we migrated to the land known as Eltara, to live here and make amends for our foolishness.</p>
 
 </div> <!-- end .article -->
+
+<div class="prev-story">
+  <a href="humans.php">Previous story</a>
+</div>
+<div class="next-story">
+  <a href="defenders.php">Next Story</a>
+</div>
+
+
 <?php include('footer.php') ?>
