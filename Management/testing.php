@@ -10,14 +10,14 @@
   <div><h2>Please choose from one of these Players:</h2><br /></div>
 <?php
 //Step2
-$query = "SELECT PlayerID, LastName, FirstName FROM Players ORDER BY LastName, FirstName";
+$query = "SELECT PlayerID, LastName, FirstName FROM Players";
 mysqli_query($db, $query) or die('Error querying database.');
 
 $result = mysqli_query($db, $query);
 
-echo '<div class="faux-table">';
+echo '<div class="container">';
 while ($row = mysqli_fetch_array($result)) {
-  echo '<a href="specplayer.php?PlayerID='.$row['PlayerID'].'"><div class="pseudo-table">'.$row['PlayerID'].' '.$row['LastName'].', '.$row['FirstName'].'</div></a>';
+  echo '<a href="specplayer.php?id='.$row['PlayerID'].'"><div class="button2">'.$row['PlayerID'].' '.$row['LastName'].', '.$row['FirstName'].'</div></a>';
 }
 echo '</div>';
 

@@ -154,10 +154,16 @@ nav ul li a {
     3.4 Content
 --------------------------------------------------------------*/
 
-.container {
+.container, .faux-table {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.faux-table {
+  width: 300px;
+  margin: auto;
+  overflow: auto;
 }
 
 /*--------------------------------------------------------------
@@ -250,7 +256,18 @@ td:last-child {         /* Sets the width of the last column */
 td {
   padding: 10px;
   }
+tr:hover {
+  background-color: darkgreen;
+  color: white;
+  }
 
+tr a:hover{
+  color: white;
+  }
+
+.pseudo-table {
+  margin: 10px;
+}
 /*--------------------------------------------------------------
     4.2 Links
 --------------------------------------------------------------*/
@@ -295,7 +312,7 @@ button, .button, .button1 {
   font-weight: bold;
 }
 
-button a, .container2 a, .container a {
+button a, .container2 a, .container a, .faux-table a {
   text-decoration: none;
 }
 
