@@ -6,7 +6,7 @@
   <title>Eltara Character Database</title>  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="style.css" rel="stylesheet">  <!-- local style sheet -->
+  <link href="../Website/style.css" rel="stylesheet">  <!-- local style sheet -->
   <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Metamorphous" rel="stylesheet">  <!-- font -->
   <script src="myScript.js"></script> <!-- External javascript file -->
 </head>

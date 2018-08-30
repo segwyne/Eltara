@@ -55,15 +55,15 @@ darkgreen is accent color
     2.0 Base
 --------------------------------------------------------------*/
 body {
-    margin:0;
-    background-color: rgba(0,100,0,.25);
-    }
+  margin:0;
+  background-color: rgba(0,100,0,.25);
+  }
 
 /*--------------------------------------------------------------
     2.1 Alignments
 --------------------------------------------------------------*/
 * {
-    box-sizing: borderbox;
+  box-sizing: borderbox;
 }
 .spacer {
   height: 150px;
@@ -73,9 +73,9 @@ body {
 --------------------------------------------------------------*/
 /* Keep images within their elements */
 .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 	}
 
 /*--------------------------------------------------------------
@@ -108,49 +108,49 @@ header {
 --------------------------------------------------------------*/
 
 nav {
-    display: block;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 200px;
-    height: 100%;
-    background-color: darkgreen;
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: darkgreen;
 }
 #navspacer {
-    height: 15%;
-    }
+  height: 15%;
+  }
 #toggle-menu {
-    display: none;
-    text-align: center;
-    color: white;
-    padding: 5px;
+  display: none;
+  text-align: center;
+  color: white;
+  padding: 5px;
 }
 #main-menu {
-    justify-content: center;
-    flex-direction: column;
-    background-color: darkgreen;
-    display: flex;
-    position: fixed;
-    right: 0;
+  justify-content: center;
+  flex-direction: column;
+  background-color: darkgreen;
+  display: flex;
+  position: fixed;
+  right: 0;
 }
 #main-menu li {
-    font-size: 16px;
-    line-height: 2;
-    width: 140px;
-    padding: 5px 30px;  
-    text-align: center;
-    color: white;
-    }
+  font-size: 16px;
+  line-height: 2;
+  width: 140px;
+  padding: 5px 30px;  
+  text-align: center;
+  color: white;
+  }
 #main-menu li a {
-    color: white;
-    }
+  color: white;
+  }
 /* Turns the menu on */
 #tm:checked + #main-menu {
-    display: flex;
+  display: flex;
 }
 
 #menu input[type="checkbox"] {
-    display: none;
+  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -164,6 +164,7 @@ nav {
 .container {
   display: flex;
   flex-direction: grid;
+  flex-wrap: wrap;
   justify-content: center;
 }
 /*--------------------------------------------------------------
@@ -187,22 +188,22 @@ nav {
 --------------------------------------------------------------*/
 footer {
 	position: fixed; /* Keeps footer at bottom of the page, regardless of height of content */
-    bottom: 0;
-    width: calc(100% - 20px);
-    background-color: #darkgreen;
-	  text-align: center;
-    color: white;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
+  bottom: 0;
+  width: calc(100% - 20px);
+  background-color: #darkgreen;
+	text-align: center;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 	}
 footer > div {
-    width: 50%;
-    padding: 5px 0;
-}
+  width: 50%;
+  padding: 5px 0;
+  }
 footer a {
-    color: white;
-    }
+  color: white;
+  }
 /*--------------------------------------------------------------
    __  ___        __     __   
   /  |/  /__  ___/ /_ __/ /__ 
@@ -217,23 +218,25 @@ footer a {
 --------------------------------------------------------------*/
 table {
   margin: auto;
-  width: 75%;
   border-collapse: collapse;
   }
 
+th {
+  border-bottom: 2px solid darkgreen;
+  }
+
 td:first-child {        /* Sets the width of the first column */
-    width: 70%;
-    }
+  width: 50px;
+  text-align: center;    
+  }
 
 td:last-child {         /* Sets the width of the last column */
-    width: 30%;
-    text-align: center;
-    }
+  text-align: left;
+  }
 
 td {
-    padding: 5px;
-    border: 1px solid purple;
-    }
+  padding: 10px;
+  }
 /*--------------------------------------------------------------
     4.2 Links
 --------------------------------------------------------------*/
@@ -249,15 +252,15 @@ a {
 --------------------------------------------------------------*/
 
 .menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
  	}
 
 .menu li a{
-    text-decoration: none;
-    }
+  text-decoration: none;
+  }
 
 /*--------------------------------------------------------------
     4.5 Buttons
@@ -301,30 +304,30 @@ button:hover a, .button:hover a{
     5.0 Typography
 --------------------------------------------------------------*/
 h1 {
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 100px;
-    font-weight: 500;
-    text-align: center;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 100px;
+  font-weight: 500;
+  text-align: center;
 	}
 h2 {
-    text-align: center;
-    }
+  text-align: center;
+  }
 p {
-    margin: 10px;
-    text-align: center;
-    }
+  margin: 10px;
+  text-align: center;
+  }
 #banner {
-    margin: 0;
-    color: white;
-    font-size: 100px;
-    }
+  margin: 0;
+  color: white;
+  font-size: 100px;
+  }
 #byline {
-    display: inline;
-    margin: 0;
-    color: white;
-    font-family: 'Metamorphous', serif;
-    font-size: 45px;
-    }
+  display: inline;
+  margin: 0;
+  color: white;
+  font-family: 'Metamorphous', serif;
+  font-size: 45px;
+  }
 
 /*--------------------------------------------------------------
    __  ___       ___     
@@ -344,29 +347,29 @@ p {
     7.0 Responsive
 --------------------------------------------------------------*/
 media only screen and (max-width: 768px) {
-    header {
-      transform: rotate (0deg);
-    }
-    #main-menu {
-        display: none;
-        flex-direction: row;
-    }
+  header {
+    transform: rotate (0deg);
+  }
+  #main-menu {
+    display: none;
+    flex-direction: row;
+  }
 
-    #toggle-menu {
-        display: block;
-    }
-    #byline {
-        display: none;
-    }
-    footer {
-        flex-direction: column;
-    }
-    footer > div {
-        width: 100%;
-    }
-    #banner {
-        font-size: 30px;
-    }
+  #toggle-menu {
+    display: block;
+  }
+  #byline {
+    display: none;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer > div {
+    width: 100%;
+  }
+  #banner {
+    font-size: 30px;
+  }
 }
 
 /

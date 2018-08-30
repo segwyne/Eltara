@@ -230,23 +230,27 @@ footer a {
 --------------------------------------------------------------*/
 
 table {
-  margin: 10px;
+  margin: auto;
   border-collapse: collapse;
   }
 
+th {
+  border-bottom: 2px solid darkgreen;
+  }
+
 td:first-child {        /* Sets the width of the first column */
-  width: 70%;
+  width: 4em;
+  text-align: center;    
   }
 
 td:last-child {         /* Sets the width of the last column */
-  width: 30%;
-  text-align: center;
+  text-align: left;
   }
 
 td {
-  padding: 5px;
-  border: 1px solid purple;
+  padding: 10px;
   }
+
 /*--------------------------------------------------------------
     4.2 Links
 --------------------------------------------------------------*/
@@ -400,10 +404,6 @@ p {
     width: 80%;
     margin: auto;
   }
-  table {
-    width: 75%;
-    margin: auto;
-  }
   h1 {
     font-size: 100px;
   }
@@ -464,11 +464,6 @@ p {
     padding-bottom: 0;
     margin: auto;
   } 
-  table {
-    width: 50%;
-    margin: auto;
-  }
-
 
 }
 
