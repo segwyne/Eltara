@@ -3,7 +3,7 @@
   <h1>Spells</h1>
   <div class="spacer"></div>
   <div class="container">
-    <button class="button">Look up existing spell</button>
+    <a href="spell-lookup.php"><button class="button">Look up existing spell</button></a>
     <button class="button">Add new spell</button>
   </div> <!-- end .container -->
 

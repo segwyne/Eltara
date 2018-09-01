@@ -80,6 +80,9 @@ body {
   display: block;
   height: 75px;
 }
+.linespacer {
+  width: 50px;
+}
 
 /*--------------------------------------------------------------
     2.2 Clearings
@@ -362,6 +365,11 @@ p {
   font-family: 'Metamorphous', serif;
   font-size: 30px;
   }
+.label {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
 
 
 /*--------------------------------------------------------------
@@ -481,6 +489,11 @@ p {
     padding-bottom: 0;
     margin: auto;
   } 
+  #address  {
+    display: block;
+    width: 500px;
+    margin: auto;
+  }
 
 }
 

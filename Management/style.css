@@ -328,6 +328,11 @@ p {
   font-family: 'Metamorphous', serif;
   font-size: 45px;
   }
+.label {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
 
 /*--------------------------------------------------------------
    __  ___       ___     
@@ -370,6 +375,11 @@ media only screen and (max-width: 768px) {
   #banner {
     font-size: 30px;
   }
+  #address  {
+    display: block;
+    float: left;
+    width: 500px;
+  }
 }
 
-/
+
